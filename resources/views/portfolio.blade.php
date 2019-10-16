@@ -42,74 +42,96 @@
                 <ul class="list-inline m-0 py-4">
                     <li class="email list-inline-item px-3"><a href="mailto: gabriel.delallavepinto@gmail.com"><i class="material-icons align-middle pr-2">email</i>gabriel.delallavepinto@gmail.com</a></li>
                     <li class="phone list-inline-item px-3"><a href="tel: +34676005261"><i class="material-icons align-middle pr-2">phone</i>+34 676 00 52 61</a></li>
-                    <li class="website list-inline-item px-3"><a href="#" target="_blank"><i class="material-icons align-middle pr-2">public</i>portfoliosite.com</a></li>
+                    <li class="website list-inline-item px-3"><a href="https://portfolio.gabrieldelallavepinto.com" target="_blank"><i class="material-icons align-middle pr-2">public</i>portfolio</a></li>
                 </ul>
             </div>
         </div>
 
+
+        @php
+            $experiencias = [
+                [
+                    "year" => "06/2018 - 06/2019",
+                    "text" => "Diseñador y Desarrollador Web",
+                    "location" => "Ayuda-T un lugar todas las soluciones S.L., 11500 El Puerto de Santa María, Cádiz",
+                ],
+                [
+                    "year" => "09/2017 - 06/2018",
+                    "text" => "Practicas de empresa como desarrollador Web",
+                    "location" => "Ayuda-T un lugar todas las soluciones S.L., 11500 El Puerto de Santa María, Cádiz",
+                ],
+
+
+            ];
+        @endphp
         <div class="content mt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 section experiences-section">
                         <h3 class="text-center font-weight-bold mb-5">Experiencia</h3>
                         <div class="timeline">
-
-                            <div class="item">
-                                <p class="date">2012 - 2019</p>
-                                <p class="place">Analista programador de aplicaciones Web</p>
-                                <div class="location"><p>Ayuda-T un lugar todas las soluciones S.L.</p></div>
-                                <div class="location"><i class="float-left material-icons pr-2">room</i><p>11500 El Puerto de Sta María, Cádiz</p></div>
-                            </div>
-
-                            <div class="item">
-                                <p class="date">2012 - 2019</p>
-                                <p class="place">Analista programador de aplicaciones Web</p>
-                                <div class="location"><p>Ayuda-T un lugar todas las soluciones S.L.</p></div>
-                                <div class="location"><i class="float-left material-icons pr-2">room</i><p>11500 El Puerto de Sta María, Cádiz</p></div>
-                            </div>
-
+                            @foreach ($experiencias as $experiencia)
+                                <div class="item">
+                                    <p class="date">{{ $experiencia['year'] }}</p>
+                                    <p class="place">{{ $experiencia['text'] }}</p>
+                                    <div class="location"><p>{{ $experiencia['location'] }}</p></div>
+                                    {{-- <div class="location"><i class="float-left material-icons pr-2">room</i><p>11500 El Puerto de Sta María, Cádiz</p></div> --}}
+                                </div>
+                            @endforeach
                         </div>
                     </div>
+
+                    @php
+                        $cursos = [
+                            [
+                                "year" => "2014",
+                                "text" => "CISCO - CCNA Routing and Switching 1",
+                            ]
+                        ];
+                    @endphp
 
                     <div class="col-md-12 section courses-section">
                         <h3 class="text-center font-weight-bold mb-5">Cursos</h3>
                         <div class="timeline">
+                            @foreach ($cursos as $curso)
+
 
                             <div class="item">
-                                <p class="date">2012 - 2019</p>
-                                <p class="place">Analista programador de aplicaciones Web</p>
-                                <div class="location"><p>Ayuda-T un lugar todas las soluciones S.L.</p></div>
-                                <div class="location"><i class="float-left material-icons pr-2">room</i><p>11500 El Puerto de Sta María, Cádiz</p></div>
+                                <p class="date">{{$curso["year"]}}</p>
+                                <p class="place">{{$curso["text"]}}</p>
                             </div>
-
-                            <div class="item">
-                                <p class="date">2012 - 2019</p>
-                                <p class="place">Analista programador de aplicaciones Web</p>
-                                <div class="location"><p>Ayuda-T un lugar todas las soluciones S.L.</p></div>
-                                <div class="location"><i class="float-left material-icons pr-2">room</i><p>11500 El Puerto de Sta María, Cádiz</p></div>
-                            </div>
+                            @endforeach
 
                         </div>
                     </div>
 
+
+                    @php
+                        $educaciones = [
+                            [
+                                "year" => "2012 - 2019",
+                                "text" => "Grado en Ingeniería Informática (Pendiente B1 Inglés)",
+                                "location" => "Escuela Superior de Ingeniería de Cádiz. 11519 Puerto Real, Cádiz",
+                            ],
+                            [
+                                "year" => "2008 - 2012",
+                                "text" => "Bachiller científico-tecnológico",
+                                "location" => "I.E.S Sancti Petri, 11100 San Fernando, Cádiz",
+                            ],
+                        ];
+                    @endphp
                     <div class="col-md-12 section education-section">
                         <h3 class="text-center font-weight-bold mb-5">Educación</h3>
                         <div class="timeline">
+                            @foreach ($educaciones as $educacion)
 
-                            <div class="item">
-                                <p class="date">2012 - 2019</p>
-                                <p class="place">Analista programador de aplicaciones Web</p>
-                                <div class="location"><p>Ayuda-T un lugar todas las soluciones S.L.</p></div>
-                                <div class="location"><i class="float-left material-icons pr-2">room</i><p>11500 El Puerto de Sta María, Cádiz</p></div>
-                            </div>
 
-                            <div class="item">
-                                <p class="date">2012 - 2019</p>
-                                <p class="place">Analista programador de aplicaciones Web</p>
-                                <div class="location"><p>Ayuda-T un lugar todas las soluciones S.L.</p></div>
-                                <div class="location"><i class="float-left material-icons pr-2">room</i><p>11500 El Puerto de Sta María, Cádiz</p></div>
-                            </div>
-
+                                <div class="item">
+                                    <p class="date">{{ $educacion['year'] }}</p>
+                                    <p class="place">{{ $educacion['text'] }}</p>
+                                    <div class="location"><p>{{ $educacion['location'] }}</p></div>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
 
