@@ -167,7 +167,7 @@
 
                             @foreach($skills as $skill)
                                 <div class="item col-12 col-md-4">
-                                    <div class="easy-pie-chart text-center" data-percent="73">73%</div>
+                                    <div class="easy-pie-chart text-center" data-percent="{{$skill['percentage']}}">{{$skill['percentage']}}%</div>
                                     <h4 class="skill-name">{{ $skill["name"] }}</h4>
                                     <div class="level">{{ $skill["time"] }} años</div>
                                 </div>
