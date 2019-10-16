@@ -73,7 +73,6 @@ body {
   border-top-right-radius: 2px;
   position: relative;
   padding: 0 30px;
-  margin-left: 120px;
 }
 
 .timeline .item {
@@ -112,15 +111,26 @@ body {
   z-index: 10;
 }
 
-.item .place,
-.item .date {
-  font-size: 18px;
-  color: #009688;
+.item {
+  margin-bottom: 2rem;
 }
 
-.date {
-  position: absolute;
-  left: -150px;
+.item .place,
+.item .date {
+  color: #009688;
+  margin: 0px;
+}
+
+.item .place {
+  font-size: 18px;
+}
+
+.item .date {
+  font-size: 18px;
+}
+
+.item .location {
+  font-size: 14px;
 }
 
 .easy-pie-chart {
